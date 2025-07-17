@@ -1,0 +1,9 @@
+steps:
+  - label: ":golang: Lint"
+    command: "golangci-lint run ./..."
+
+  - label: ":golang: Test"
+    command: "go test ./..."
+
+  - label: ":golang: Build"
+    command: "go build -o bin/merriam-webster ./source/cmd/app"
