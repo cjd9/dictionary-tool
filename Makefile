@@ -5,7 +5,7 @@
 all: build
 
 build:
-	go build -o bin/merriam-webster ./source/cmd/app
+	go build -o bin/merriam-webster ./source/cmd/merriam-webster
 
 test:
 	go test ./...
@@ -23,4 +23,4 @@ GO_PACKAGE=github.com/example/merriam-webster
 
 .PHONY: install
 install:
-	GOPATH=$(shell go env GOPATH) go install -mod vendor -ldflags="-X main.version=$(TAG)" $(GO_PACKAGE)/source/cmd/app 
+	GOPATH=$(shell go env GOPATH) go install -mod vendor -ldflags="-X main.version=$(TAG)" $(GO_PACKAGE)/source/cmd/merriam-webster 
