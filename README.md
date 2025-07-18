@@ -1,3 +1,26 @@
+## Installation
+
+To install the CLI tool to your system, run:
+
+```
+make install
+```
+
+This will build the binary and copy it to /usr/local/bin (you may be prompted for your password).
+
+---
+
+## Requirements
+
+- You must have a Merriam-Webster API key (see [API documentation](https://dictionaryapi.com/products/api-collegiate-dictionary)).
+- Before using the CLI, export your API key as an environment variable:
+
+```
+export MERRIAM_WEBSTER_API_KEY=your_api_key_here
+```
+
+---
+
 ##  merriam-webster
 
 This project provides a command line tool to query the Merriam-Webster Collegiate Dictionary API and receive a formatted response with the word definition.

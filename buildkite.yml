@@ -1,9 +1,23 @@
 steps:
-  - label: ":golang: Lint"
-    command: "golangci-lint run ./..."
+  - name: ":pray: Test"
+    command: make test
+    artifact_paths:
+      - data/coverage.html
+    agents:
+      queue: general
 
-  - label: ":golang: Test"
-    command: "go test ./..."
+  - wait
 
-  - label: ":golang: Build"
-    command: "go build -o bin/merriam-webster ./source/cmd/app"
+  - name: ":rocket: Build and push"
+    command: make build push
+    branches:
+      - "!master"
+    agents:
+      queue: general
+
+  - name: ":rocket: Build, push and release"
+    command: make build push release
+    branches:
+     - master
+    agents:
+      queue: general
