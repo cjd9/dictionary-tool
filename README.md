@@ -1,3 +1,15 @@
+## Installation
+
+To install the CLI tool to your system, run:
+
+```
+make install
+```
+
+This will build the binary and copy it to /usr/local/bin (you may be prompted for your password).
+
+---
+
 ##  merriam-webster
 
 This project provides a command line tool to query the Merriam-Webster Collegiate Dictionary API and receive a formatted response with the word definition.
